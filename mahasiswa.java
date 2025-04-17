@@ -5,7 +5,10 @@ public class mahasiswa {
     String nama;
     String prodi;
     
-    void tampilmahasiswa () {
-            System.out.println("NIM: " + NIM + ", Nama: " + nama + ", Prodi: " + prodi);
-        }
+    public void tampilmahasiswa() {
+        System.out.println("NIM     : " + NIM);
+        System.out.println("Nama    : " + nama);
+        System.out.println("prodi : " + prodi);
+        System.out.println("--------------------------");
     }
+}
