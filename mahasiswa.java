@@ -5,7 +5,7 @@ public class mahasiswa {
     String nama;
     String prodi;
     
-    void tampilMahasiswa () {
-        
+    void tampilmahasiswa () {
+            System.out.println("NIM: " + NIM + ", Nama: " + nama + ", Prodi: " + prodi);
+        }
     }
-}
