@@ -8,7 +8,7 @@ public class main_cm {
         mahasiswa[] mhs = {
             new mahasiswa("22001", "Ali Rahman", "Informatika"),
             new mahasiswa("22002", "Budi Santoso", "Informatika"),
-            new mahasiswa("22003", "Citra Dewi", "Informatika")
+            new mahasiswa("22003", "Citra Dewi", "Sistem Informasi Bisnis"),
         };
 
         matakuliah[] mk = {
@@ -20,8 +20,8 @@ public class main_cm {
         penilaian[] nilai = {
             new penilaian(mhs[0], mk[0], 80, 85, 90),
             new penilaian(mhs[0], mk[1], 60, 75, 70),
-            new penilaian(mhs[1], mk[0], 75, 70, 85),
-            new penilaian(mhs[2], mk[1], 90, 90, 95),
+            new penilaian(mhs[1], mk[0], 75, 70, 80),
+            new penilaian(mhs[2], mk[1], 85, 90, 95),
             new penilaian(mhs[2], mk[2], 80, 90, 65)
         };
 
@@ -48,16 +48,24 @@ public class main_cm {
                     for (penilaian p : nilai) p.tampilpenilaian();
                     break;
                 case 4:
-                    Arrays.sort(nilai, (a, b) -> Double.compare(b.nilaiAkhir, a.nilaiAkhir));
-                    for (penilaian p : nilai) p.tampilpenilaian();
-                    break;
+                for (int i = 0; i < nilai.length - 1; i++) {
+                    for (int j = 0; j < nilai.length - 1 - i; j++) {
+                        if (nilai[j].nilaiAkhir < nilai[j + 1].nilaiAkhir) {
+                            penilaian temp = nilai[j];
+                            nilai[j] = nilai[j + 1];
+                            nilai[j + 1] = temp;
+                        }
+                    }
+                }
+                for (penilaian p : nilai) p.tampilpenilaian();
+                break;
                 case 5:
                     System.out.print("Masukkan NIM: ");
-                    sc.nextLine(); // buang newline
+                    sc.nextLine(); 
                     String nim = sc.nextLine();
                     boolean ditemukan = false;
                     for (mahasiswa m : mhs) {
-                        if (m.NIM.equals(nim)) {
+                        if (m.NIM.equalsIgnoreCase(nim)) {
                             System.out.println("Mahasiswa Ditemukan:");
                             m.tampilmahasiswa();
                             ditemukan = true;
