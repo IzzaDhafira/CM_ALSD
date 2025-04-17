@@ -8,7 +8,7 @@ public class matakuliah {
         this.sks = sks;
     }
 
-    public void tampilMataKuliah() {
+    public void tampilmataKuliah() {
         System.out.println("Kode MK: " + kodeMK + ", Nama MK: " + namaMK + ", SKS: " + sks);
     }
 }

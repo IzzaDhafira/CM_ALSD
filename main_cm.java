@@ -1,15 +1,15 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class main_cm {
-   public static void main(String[] args) {
-
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        mahasiswa mhs = mahasiswa[] mhs = {
+        mahasiswa[] mhs = {
             new mahasiswa("22001", "Ali Rahman", "Informatika"),
             new mahasiswa("22002", "Budi Santoso", "Informatika"),
-            new mahasiswa("22003", "Citra Dewi", "Informatika")};
-        
+            new mahasiswa("22003", "Citra Dewi", "Informatika")
+        };
 
         matakuliah[] mk = {
             new matakuliah("MK001", "Struktur Data", 3),
@@ -17,7 +17,7 @@ public class main_cm {
             new matakuliah("MK003", "Desain Web", 3)
         };
 
-        penilaianenilaian[] nilai = {
+        penilaian[] nilai = {
             new penilaian(mhs[0], mk[0], 80, 85, 90),
             new penilaian(mhs[0], mk[1], 60, 75, 70),
             new penilaian(mhs[1], mk[0], 75, 70, 85),

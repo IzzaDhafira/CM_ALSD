@@ -11,10 +11,12 @@ public class penilaian {
         this.nilaiUAS = uas;
         hitungNilaiAkhir();
     }
+
     void hitungNilaiAkhir() {
-        nilaiAkhir = (nilaiTugas*0.3)+(nilaiUTS*0.3)+(nilaiUAS*0.4);
+        nilaiAkhir = (nilaiTugas * 0.3) + (nilaiUTS * 0.3) + (nilaiUAS * 0.4);
     }
-    void tampilPenilaian() {
+
+    void tampilpenilaian() {
         System.out.println(mahasiswa.nama + " | " + matakuliah.namaMK + " | Nilai Akhir: " + nilaiAkhir);
     }
 }
